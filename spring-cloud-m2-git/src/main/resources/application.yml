@@ -1,0 +1,23 @@
+---
+server:
+  port : 8888
+spring:
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
+        git:
+          uri: https://github.com/karthik20/spring-cloudconfig-wa-toll
+          search-paths: 'station*'
+          repos:
+            perf:
+              pattern: '*/perf'
+              uri: https://github.com/karthik20/spring-cloudconfig-wa-toll-perf
+              search-paths: 'station*'
+security:
+  basic:
+    enabled: true
+  user:
+    name: karthik
+    password: karthik
